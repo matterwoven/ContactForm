@@ -1,0 +1,131 @@
+body {
+    background-color: rgb(224, 224, 224);
+    font-family: Roboto;
+}
+
+.mainForm {
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    padding: 50px;
+    border-radius: 10px;
+    /* Sourced from the w3schools website for perfectionism */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    @media screen and (min-width: 780px) {
+        background-color: rgb(255, 255, 255);
+        margin: 50px;
+        padding: 50px;
+        border-radius: 10px;
+        width: clamp(200px, 700px, 700px);
+        /* Sourced from the w3schools website for perfectionism */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+textarea {
+    max-width: 100%;
+    max-height: 75px;
+    min-width: 100%;
+    min-height: 75px;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+}
+
+.formCardsHolder > * > label{
+    font-weight:600;
+}
+
+.formCardsHolder > * > input{
+    width: 80%;
+    box-sizing: border-box;
+    height: 28px;
+}
+
+.formCardsHolder > * {
+    justify-self: stretch;
+}
+
+.formCardsHolder > * > select{
+    width: 80%;
+    box-sizing: border-box;
+    height: 28px;
+}
+
+.formCardsHolder > .otherCard > *{
+    width: 100%;
+    box-sizing: border-box;
+    height: 28px;
+} 
+.formCardsHolder > .jobTitleCard > *{
+    width: 100%;
+    box-sizing: border-box;
+} 
+.formCardsHolder > .emailAddressCard > *{
+    width: 100%;
+    box-sizing: border-box;
+} 
+
+.submitButton {
+    height: 40px;
+    width: 90px;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(90, 150, 0);
+    border-color: transparent;
+}
+
+.formCardsHolder {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    @media screen and (min-width: 780px) { 
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0;
+        grid-row-gap: 25px;
+    }
+}
+
+.fnameCard { grid-area: 1; }
+.lnameCard { grid-area: 2; }
+.jobTitleCard { grid-area: 3; }
+.companyCard { grid-area: 4; }
+.linkedInURLCard { grid-area: 5; }
+.emailAddressCard { grid-area: 6; }
+.howDidWeMeetCard { grid-area: 7; }
+.otherCard { grid-area: 8; }
+.messageCard { grid-area: 9; }
+.addToMailListCard { grid-area: 10;}
+.emailFormatCard { grid-area: 11;}
+.submitButton { grid-area: 12;}
+
+@media screen and (min-width: 780px) {
+    /* .fnameCard { grid-area: 1 / 1 / 2 / 3; }
+    .lnameCard { grid-area: 1 / 3 / 2 / 5; }
+    .jobTitleCard { grid-area: 1 / 5 / 2 / 7; }
+    .companyCard { grid-area: 2 / 1 / 3 / 3; }
+    .linkedInURLCard { grid-area: 2 / 3 / 3 / 5; }
+    .emailAddressCard { grid-area: 2 / 5 / 3 / 7; }
+    .howDidWeMeetCard { grid-area: 3 / 1 / 4 / 4; }
+    .otherCard { grid-area: 3 / 4 / 4 / 7; }
+    .messageCard { grid-area: 4 / 1 / 5 / 7; } */
+    .fnameCard { grid-area: 1 / 1 / 2 / 3; }
+    .lnameCard { grid-area: 1 / 3 / 2 / 5; }
+    .jobTitleCard { grid-area: 1 / 5 / 2 / 7; }
+    .companyCard { grid-area: 2 / 1 / 3 / 3; }
+    .linkedInURLCard{ grid-area: 2 / 3 / 3 / 5; }
+    .emailAddressCard { grid-area: 2 / 5 / 3 / 7; }
+    .howDidWeMeetCard { grid-area: 3 / 1 / 4 / 4; }
+    .otherCard { grid-area: 3 / 4 / 4 / 7; }
+    .messageCard{ grid-area: 4 / 1 / 6 / 7; }
+    .addToMailListCard { grid-area: 6 / 1 / 7 / 4; }
+    .emailFormatCard { grid-area: 7 / 1 / 8 / 4; }
+    .submitButton { grid-area: 8 / 1 / 9 / 2; }
+}

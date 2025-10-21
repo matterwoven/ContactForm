@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="icon" href="../images/DocumentIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    
+</head>
+<body class="body">
+    <div class="mainForm">
+        <h1 class="header">Contact Form</h1>
+        <form class="formCardsHolder">
+            <div class="fnameCard">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>  
+            </div>
+            <div class="lnameCard">
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname">
+            </div>
+            <div class="jobTitleCard">
+                <label for="jobTitle">Job Title:</label><br>
+                <input type="text" id="jobTitle" name="jobTitle"><br>
+            </div>
+            <div class="companyCard">
+                <label for="company">Company:</label><br>
+                <input type="text" id="company" name="company"><form>
+            </div>
+            <div class="linkedInURLCard">
+                <label for="linkedInURL">LinkedIn URL:</label><br>
+                <input type="text" id="linkedInURL" name="linkedInURL"><br>
+            </div>
+            <div class="emailAddressCard">
+                <label for="emailAddress">Email Address:</label><br>
+                <input type="text" id="emailAddress" name="emailAddress">
+            </div>
+            <div class="howDidWeMeetCard">
+                <label for="howDidWeMeet">How did we meet?</label><br>
+                <select type="text" id="howDidWeMeet" name="howDidWeMeet">
+                    <option value="" selected disabled hidden>Please select</option>
+                    <option value="work">Workplace</option>
+                    <option value="saab">Networking Event</option>
+                    <option value="fiat">Casual</option>
+                    <option value="audi">Other (Specify in "Other")</option>
+                </select>
+            </div>
+            <div class="otherCard">
+                <label for="other">Other (Please Specify)</label><br>
+                <input type="text" id="other" name="other">
+            </div>
+            <div class="messageCard">
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="addToMailListCard">
+                <label><input type="checkbox" id="addToMailList" name="addToMailList"></input/>Please add me to your mailing list</label>
+            </div>
+            <div class="emailFormatCard">
+                <label>Choose an email format: <label><input type="radio" id="htmlRadio" name="htmlOrTextRadio">HTML</input></label><label><input type="radio" id="textRadio" name="htmlOrTextRadio"/>Text</input></label></label>
+            </div>
+            <input class="submitButton" type="submit" name="submitButton"/>
+        </form>
+    </div>
+</body>
+</html>
