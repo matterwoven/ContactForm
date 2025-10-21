@@ -31,6 +31,12 @@ textarea {
     box-sizing: border-box;
 }
 
+.formCardsHolder > * > select{
+    width: 80%;
+    box-sizing: border-box;
+    height: 28px;
+}
+
 .header {
     text-align: center;
 }
@@ -48,26 +54,6 @@ textarea {
 .formCardsHolder > * {
     justify-self: stretch;
 }
-
-.formCardsHolder > * > select{
-    width: 80%;
-    box-sizing: border-box;
-    height: 28px;
-}
-
-.formCardsHolder > .otherCard > *{
-    width: 100%;
-    box-sizing: border-box;
-    height: 28px;
-} 
-.formCardsHolder > .jobTitleCard > *{
-    width: 100%;
-    box-sizing: border-box;
-} 
-.formCardsHolder > .emailAddressCard > *{
-    width: 100%;
-    box-sizing: border-box;
-} 
 
 .submitButton {
     height: 40px;
@@ -128,4 +114,20 @@ textarea {
     .addToMailListCard { grid-area: 6 / 1 / 7 / 4; }
     .emailFormatCard { grid-area: 7 / 1 / 8 / 4; }
     .submitButton { grid-area: 8 / 1 / 9 / 2; }
+    
+
+
+    .formCardsHolder > .otherCard > *{
+        width: 100%;
+        box-sizing: border-box;
+        height: 28px;
+    } 
+    .formCardsHolder > .jobTitleCard > *{
+        width: 100%;
+        box-sizing: border-box;
+    } 
+    .formCardsHolder > .emailAddressCard > *{
+        width: 100%;
+        box-sizing: border-box;
+    } 
 }
