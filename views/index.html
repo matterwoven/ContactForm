@@ -6,7 +6,7 @@
     <title>Contact Form</title>
     <link rel="icon" href="../images/DocumentIcon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/styles.css">
-    
+    <script src="js/index.js" defer></script>
 </head>
 <body class="body">
     <div class="mainForm">
@@ -14,10 +14,12 @@
         <form class="formCardsHolder">
             <div class="fnameCard">
                 <label for="fname">First name:</label><br>
+                <p style="opacity: 0%;" id="fname-error">First Name Required</p><br>
                 <input type="text" id="fname" name="fname"><br>  
             </div>
             <div class="lnameCard">
                 <label for="lname">Last name:</label><br>
+                <p style="opacity: 0%;" id="lname-error">Last Name Required</p><br>
                 <input type="text" id="lname" name="lname">
             </div>
             <div class="jobTitleCard">
@@ -26,18 +28,21 @@
             </div>
             <div class="companyCard">
                 <label for="company">Company:</label><br>
-                <input type="text" id="company" name="company"><form>
+                <input type="text" id="company" name="company">
             </div>
             <div class="linkedInURLCard">
                 <label for="linkedInURL">LinkedIn URL:</label><br>
+                <p style="opacity: 0%;" id="linkedInUrl-error">This is a required field</p><br>
                 <input type="text" id="linkedInURL" name="linkedInURL"><br>
             </div>
             <div class="emailAddressCard">
                 <label for="emailAddress">Email Address:</label><br>
+                <p style="opacity: 0%;" id="email-error">Email is required to add to mail list</p><br>
                 <input type="text" id="emailAddress" name="emailAddress">
             </div>
             <div class="howDidWeMeetCard">
                 <label for="howDidWeMeet">How did we meet?</label><br>
+                <p style="opacity: 0%;" id="howDidWeMeet-error">This is a required field</p><br>
                 <select type="text" id="howDidWeMeet" name="howDidWeMeet">
                     <option value="" selected disabled hidden>Please select</option>
                     <option value="work">Workplace</option>
@@ -55,7 +60,7 @@
                 <textarea id="message" name="message"></textarea>
             </div>
             <div class="addToMailListCard">
-                <label><input type="checkbox" id="addToMailList" name="addToMailList"></input/>Please add me to your mailing list</label>
+                <label><input type="checkbox" id="addToMailList" name="addToMailList"></input>Please add me to your mailing list</label>
             </div>
             <div class="emailFormatCard">
                 <label>Choose an email format: <label><input type="radio" id="htmlRadio" name="htmlOrTextRadio">HTML</input></label><label><input type="radio" id="textRadio" name="htmlOrTextRadio"/>Text</input></label></label>
