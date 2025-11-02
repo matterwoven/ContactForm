@@ -12,31 +12,31 @@ form.addEventListener('submit', function(event) {
 
 
     if (firstName.value.trim() === '') {
-        document.getElementById('fname-error').style.opacity = '100%';
+        document.getElementById('fname-error').style.display = "block";
         valid = false;
     }
 
     if (lastName.value.trim() === '') {
-        document.getElementById('lname-error').style.opacity = '100%';
+        document.getElementById('lname-error').style.display = "block";
         valid = false;
     }
 
     if (addToMailList.checked) {
         if (emailAddress.value.trim() === '' || !emailAddress.value.includes("@") || !emailAddress.value.includes(".")) {
-            document.getElementById('email-error').style.opacity = '100%';
+            document.getElementById('email-error').style.display = "block";
             valid = false;
         }
     }
 
     if (linkedInURL.value.trim() !== '') {
         if (!linkedInURL.value.trim().includes("https://linkedin.com/in/")) {
-            document.getElementById('linkedInUrl-error').style.opacity = '100%';
+            document.getElementById('linkedInUrl-error').style.display = "block";
             valid = false;
         }
     }
 
     if (howDidWeMeet.value.trim() === '') {
-        document.getElementById('howDidWeMeet-error').style.opacity = '100%';
+        document.getElementById('howDidWeMeet-error').style.display = "block";
         valid = false;
     }
 
