@@ -29,7 +29,7 @@ form.addEventListener('submit', function(event) {
     }
 
     if (linkedInURL.value.trim() !== '') {
-        if (!linkedInURL.value.trim().includes("https://linkedin.com/in/")) {
+        if (!linkedInURL.value.trim().includes("https://www.linkedin.com/in/")) {
             document.getElementById('linkedInUrl-error').style.display = "block";
             valid = false;
         }

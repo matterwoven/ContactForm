@@ -22,6 +22,34 @@ app.get('/', (req, res) => {
 
 });
 
+app.get("/admin", (req, res) => {
+    console.log(guestbookArray);
+    res.sendFile(`${import.meta.dirname}/views/admin.html`);
+    res.json({guestbookings : guestbookArray});
+})
+
+const guestbookArray = []
+
+app.post('/submit', (req, res) => {
+
+    const guestbook = {
+        fname: req.body.fname,
+        lname: req.body.lname,
+        jobTitle: req.body.jobTitle,
+        company: req.body.company,
+        linkedInURL: req.body.linkedInURL,
+        emailAddress: req.body.emailAddress,
+        howDidWeMeet: req.body.howDidWeMeet,
+        other: req.body.other,
+        message: req.body.message,
+        addToMailList: req.body.addToMailList,
+        htmlOrTextRadio: req.body.htmlOrTextRadio,
+        timestamp: new Date()
+    };
+    guestbookArray.push(guestbook);
+    console.log(guestbookArray);
+    res.sendFile(`${import.meta.dirname}/views/admin.html`)
+})
 // Start the server and listen on the specified port 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
