@@ -27,13 +27,13 @@ app.get('/', (req, res) => {
 
 app.get("/confirmation", (req, res) => {
     console.log(guestbookArray);
-    res.sendFile(`/views/confirmation.html`);
+    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 })
 
 app.get("/admin", (req, res) => {
     console.log(guestbookArray);
     res.json({guestbookings : guestbookArray});
-    res.sendFile(`/views/admin.html`);
+    res.sendFile(`${import.meta.dirname}/views/admin.html`);
 })
 
 // app.get("/submit", (req, res) => {
