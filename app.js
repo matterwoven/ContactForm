@@ -24,10 +24,6 @@ app.get('/', (req, res) => {
 
 });
 
-app.get("/confirmation", (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/admin.html`);
-})
-
 app.get("/admin", (req, res) => {
     console.log(guestbookArray);
     res.json({guestbookings : guestbookArray});
@@ -52,7 +48,7 @@ app.post('/submit', (req, res) => {
     };
     guestbookArray.push(guestbook);
     console.log(guestbookArray);
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+    res.json({guestbookings : guestbookArray});
 })
 // Start the server and listen on the specified port 
 app.listen(PORT, () => {
