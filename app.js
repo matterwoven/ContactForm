@@ -57,7 +57,7 @@ app.post('/submit', (req, res) => {
     };
     guestbookArray.push(guestbook);
     console.log(guestbookArray);
-    res.redirect("/confirmation");
+    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 })
 
 // Start the server and listen on the specified port 
