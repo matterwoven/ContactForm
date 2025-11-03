@@ -7,7 +7,7 @@ let addToMailList = document.getElementById('addToMailList');
 
 let form = document.querySelector('form');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('/submit', function(event) {
     let valid = true;
 
 
