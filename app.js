@@ -9,7 +9,9 @@ const app = express();
 const PORT = 3028;
 
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
+const guestbookArray = []
 
 // Define a default "route" ('/')
 // req: contains information about the incoming request
@@ -24,14 +26,12 @@ app.get('/', (req, res) => {
 
 app.get("/admin", (req, res) => {
     console.log(guestbookArray);
-    res.sendFile(`${import.meta.dirname}/views/admin.html`);
     res.json({guestbookings : guestbookArray});
+    res.sendFile(`${import.meta.dirname}/views/admin.html`);
 })
 
-const guestbookArray = []
 
 app.post('/submit', (req, res) => {
-
     const guestbook = {
         fname: req.body.fname,
         lname: req.body.lname,
@@ -48,7 +48,7 @@ app.post('/submit', (req, res) => {
     };
     guestbookArray.push(guestbook);
     console.log(guestbookArray);
-    res.sendFile(`${import.meta.dirname}/views/admin.html`)
+    res.json({guestbookings : guestbookArray});
 })
 // Start the server and listen on the specified port 
 app.listen(PORT, () => {

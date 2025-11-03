@@ -11,10 +11,10 @@
 <body class="body">
     <div class="mainForm">
         <h1 class="header">Contact Form</h1>
-        <form class="formCardsHolder" action="/submit">
+        <form class="formCardsHolder" action="/submit" method="post">
             <div class="fnameCard">
                 <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname"><br>  
+                <input type="text" id="fname" name="fname"></input><br>  
                 <p style="display: none;" id="fname-error">First Name Required</p>
             </div>
             <div class="lnameCard">
@@ -24,20 +24,20 @@
             </div>
             <div class="jobTitleCard">
                 <label for="jobTitle">Job Title:</label><br>
-                <input type="text" id="jobTitle" name="jobTitle"><br>
+                <input type="text" id="jobTitle" name="jobTitle"></input><br>
             </div>
             <div class="companyCard">
                 <label for="company">Company:</label><br>
-                <input type="text" id="company" name="company">
+                <input type="text" id="company" name="company"></input>
             </div>
             <div class="linkedInURLCard">
                 <label for="linkedInURL">LinkedIn URL:</label><br>
-                <input type="text" id="linkedInURL" name="linkedInURL"><br>
+                <input type="text" id="linkedInURL" name="linkedInURL"></input><br>
                 <p style="display: none;" id="linkedInUrl-error">This is a required field</p>
             </div>
             <div class="emailAddressCard">
                 <label for="emailAddress">Email Address:</label><br>
-                <input type="text" id="emailAddress" name="emailAddress">
+                <input type="text" id="emailAddress" name="emailAddress"></input>
                 <p style="display: none;" id="email-error">Email is required to add to mail list</p>
             </div>
             <div class="howDidWeMeetCard">
@@ -53,7 +53,7 @@
             </div>
             <div class="otherCard">
                 <label for="other">Other (Please Specify)</label><br>
-                <input type="text" id="other" name="other">
+                <input type="text" id="other" name="other"></input>
             </div>
             <div class="messageCard">
                 <label for="message">Message</label><br>
