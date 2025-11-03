@@ -25,6 +25,11 @@ app.get('/', (req, res) => {
 });
 
 
+app.get("/confirmation", (req, res) => {
+    console.log(guestbookArray);
+    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+})
+
 app.get("/admin", (req, res) => {
     console.log(guestbookArray);
     res.json({guestbookings : guestbookArray});
@@ -52,8 +57,10 @@ app.post('/submit', (req, res) => {
     };
     guestbookArray.push(guestbook);
     console.log(guestbookArray);
+    res.redirect("/confirm");
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 })
+
 // Start the server and listen on the specified port 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
