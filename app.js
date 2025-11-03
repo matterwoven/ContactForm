@@ -31,6 +31,9 @@ app.get("/admin", (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/admin.html`);
 })
 
+app.get("/submit", (req, res) => {
+    res.redirect("/confirm")
+})
 
 app.post('/submit', (req, res) => {
     const guestbook = {
