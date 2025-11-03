@@ -40,7 +40,7 @@ app.get("/admin", (req, res) => {
 //     res.redirect("/confirm");
 // })
 
-app.post('/submit', (req, res) => {
+app.post('/confirmation', (req, res) => {
     const guestbook = {
         fname: req.body.fname,
         lname: req.body.lname,
