@@ -24,6 +24,10 @@ app.get('/', (req, res) => {
 
 });
 
+app.get("/confirmation", (req, res) => {
+    res.sendFile(`${import.meta.dirname}/views/admin.html`);
+})
+
 app.get("/admin", (req, res) => {
     console.log(guestbookArray);
     res.json({guestbookings : guestbookArray});
