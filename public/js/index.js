@@ -49,5 +49,7 @@ form.addEventListener('submit', function(event) {
         document.getElementById('howDidWeMeet-error').style.opacity = "0%";
     }
     
-    event.preventDefault();
+    if (valid === false) {
+        event.preventDefault();
+    }
 });
