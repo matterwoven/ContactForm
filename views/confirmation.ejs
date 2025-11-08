@@ -9,5 +9,10 @@
 <body>
     <p>Your form has been submitted, thank you!</p>
     <a href="/">Return to Contact Form</a>
+    <ul>
+    <% Object.entries(jsonData).forEach(([key, value]) => { %>
+        <li><%= key %>: <%= value %></li>
+    <% }) %>
+    </ul>
 </body>
 </html>

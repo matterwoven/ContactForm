@@ -8,6 +8,7 @@ const app = express();
 // Define the port number where our server will listen
 const PORT = 3068;
 
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 
@@ -17,18 +18,18 @@ const guestbookArray = []
 // req: contains information about the incoming request
 // res: allows us to send back a response to the client
 app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/index.html`);
+    res.render(`index`);
 });
-
-app.get("/confirmation", (req, res) => {
-    console.log(guestbookArray);
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
-})
+ 
 
 app.get("/admin", (req, res) => {
-    console.log(guestbookArray);
-    res.json({guestbookings : guestbookArray});
-    res.sendFile(`${import.meta.dirname}/views/admin.html`);
+    if (guestbookArray.length === 0) {
+        // No submissions yet
+        res.render('admin', { contacts: [], hasContacts: false });
+    } else {
+        // Pass all submissions
+        res.render('admin', { contacts: guestbookArray, hasContacts: true });
+    }
 })
 
 // app.get("/submit", (req, res) => {
@@ -52,7 +53,7 @@ app.post('/confirmation', (req, res) => {
     };
     guestbookArray.push(guestbook);
     console.log(guestbookArray);
-    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+    res.render(`confirmation`, { jsonData: guestbook });
 })
 
 // Start the server and listen on the specified port 

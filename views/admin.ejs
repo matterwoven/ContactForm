@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <link rel="icon" href="../images/DocumentIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- <script src="js/loadTable.js" defer></script> -->
+</head>
+<body>
+    <div id="DataAdmin">
+        <% if (!hasContacts) { %>
+            <p>No contacts to display yet.</p>
+        <% } else { %>
+            <h2>Submitted Contacts</h2>
+            <ul>
+                <% contacts.forEach((contact, index) => { %>
+                    <li style="margin-bottom: 20px;">
+                        <strong>Contact #<%= index + 1 %></strong><br>
+                        <b>Name:</b> <%= contact.fname %> <%= contact.lname %><br>
+                        <b>Job Title:</b> <%= contact.jobTitle %><br>
+                        <b>Company:</b> <%= contact.company %><br>
+                        <b>LinkedIn:</b> <a href="<%= contact.linkedInURL %>"><%= contact.linkedInURL %></a><br>
+                        <b>Email:</b> <%= contact.emailAddress %><br>
+                        <b>How We Met:</b> <%= contact.howDidWeMeet %><br>
+                        <% if (contact.other) { %>
+                            <b>Other Info:</b> <%= contact.other %><br>
+                        <% } %>
+                        <b>Message:</b> <%= contact.message %><br>
+                        <b>Subscribed to Mailing List:</b> <%= contact.addToMailList ? "Yes" : "No" %><br>
+                        <b>Email Preference:</b> <%= contact.htmlOrTextRadio %><br>
+                        <b>Submitted:</b> <%= new Date(contact.timestamp).toLocaleString() %>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </div>
+</body>
+</html>
